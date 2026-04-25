@@ -10,7 +10,7 @@ const robotoSerif = Roboto_Serif({ subsets: ["latin"], variable: "--font-roboto-
 export const metadata: Metadata = {
   title: "Eurekathon sTEM",
   description:
-    "Eurekathon sTEM — Eureka Institute's STEM competition platform.",
+    "Eurekathon sTEM 2026 by Eureka Institute",
   generator: "eurekathon-stem",
   icons: {
     icon: [
