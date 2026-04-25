@@ -21,7 +21,10 @@
   /* Eurekathon Design Tokens - Dodgerblue Theme */
   --glass-bg: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.08);
-  --accent-blue: #003b76;
+  --accent-blue: #003b76; /* dark blue on light mode */
+  --accent-orange: #f5a623; /* orange on light mode */
+  --accent-violet: #a78bfa; /* light purple on light mode */
+  --on-accent-blue: #ffffff;
   --accent-cyan: #00303f;
   --accent-light: #87ceeb;
 
@@ -79,6 +82,10 @@
   /* Eurekathon Design Tokens - Dodgerblue Theme */
   --glass-bg: rgba(15, 17, 23, 0.3);
   --glass-border: rgba(255, 255, 255, 0.08);
+  --accent-blue: #7dd3fc; /* light blue on dark mode */
+  --accent-orange: #fde047; /* light yellow on dark mode */
+  --accent-violet: #8b5cf6; /* violet on dark mode */
+  --on-accent-blue: #0b0c0f;
 
   /* Shadcn-style semantic tokens (dark) */
   --background: oklch(0.145 0 0);

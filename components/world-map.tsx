@@ -56,17 +56,17 @@ export function WorldMap({ experiences, selectedExperience, onSelectExperience }
   }
 
   const colorMap: Record<string, string> = {
-    pink: "#ec4899",
-    yellow: "#eab308",
-    green: "#22c55e",
-    blue: "#3b82f6",
+    pink: "var(--accent-violet)",
+    yellow: "var(--accent-orange)",
+    green: "var(--accent-violet)",
+    blue: "var(--accent-blue)",
   }
 
   const colorClassMap: Record<string, string> = {
-    pink: "bg-pink-500",
-    yellow: "bg-yellow-500",
-    green: "bg-green-500",
-    blue: "bg-blue-500",
+    pink: "bg-[color:var(--accent-violet)]",
+    yellow: "bg-[color:var(--accent-orange)]",
+    green: "bg-[color:var(--accent-violet)]",
+    blue: "bg-[color:var(--accent-blue)]",
   }
 
   return (

@@ -28,6 +28,7 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
       },
     ],
+    shortcut: "/icon.svg",
     apple: "/apple-icon.png",
   },
 }
