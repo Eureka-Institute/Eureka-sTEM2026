@@ -143,16 +143,27 @@ export default function EurekathonPage() {
 
   return (
     <div className="relative min-h-screen bg-[#0B0C0F] text-[#F2F3F5] overflow-x-hidden">
-      {/* Header */}
-      <header className="fixed top-6 left-6 md:w-auto md:right-auto right-6 z-40 border border-white/10 backdrop-blur-md bg-[#0B0C0F]/80 rounded-[16px]">
-        <div className="w-full mx-auto px-6">
-          <div className="flex items-center gap-6 md:h-14 h-14">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-lg md:text-xl font-semibold font-mono hover:text-[#1e90ff] transition-colors duration-300"
-            >
-              EUREKATHON
-            </button>
+	      {/* Header */}
+	      <header className="fixed top-6 left-6 md:w-auto md:right-auto right-6 z-40 border border-white/10 backdrop-blur-md bg-[#0B0C0F]/80 rounded-[16px]">
+	        <div className="w-full mx-auto px-6">
+	          <div className="flex items-center gap-6 md:h-14 h-14">
+	            <button
+	              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+	              className="flex items-center -ml-1 hover:opacity-90 transition-opacity duration-200"
+	              aria-label="Scroll to top"
+	            >
+	              <Image
+	                src="/eureka-logo.png"
+	                alt="Eureka"
+	                width={160}
+	                height={36}
+	                priority
+	                className="h-8 w-auto md:h-9"
+	              />
+	              <span className="ml-3 text-sm md:text-base font-semibold tracking-wide">
+	                Eureka Institute
+	              </span>
+	            </button>
 
             <nav className="hidden md:flex items-center gap-8">
               <button onClick={() => scrollToSection("about")} className="text-sm text-[#A7ABB3] hover:text-[#F2F3F5] transition-colors duration-300">About</button>
@@ -193,7 +204,7 @@ export default function EurekathonPage() {
         <div className="max-w-[1120px] w-full mx-auto relative z-10" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
           <div className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 bg-[#1a1d24] border border-white/[0.07] px-4 py-2 rounded-full mb-6 text-xs md:text-sm text-[#A7ABB3] stagger-reveal">
-                            September 27 - October 25, 2025
+                            September 27 - October 25, 2026
             </div>
             <h1 className="font-serif text-[44px] leading-[1.1] md:text-[72px] md:leading-[1.05] font-medium mb-6 text-balance">
               <span className={`block stagger-reveal text-5xl font-light transition-all duration-500 md:text-7xl ${wordFade ? "opacity-100 blur-0" : "opacity-0 blur-lg"}`}>
@@ -216,10 +227,10 @@ export default function EurekathonPage() {
 
           <div className="mt-12 md:mt-16 stagger-reveal grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" style={{ animationDelay: "360ms" }}>
             {[{ icon: Globe, label: "Online Event" }, { icon: Users, label: "Ages 13-19" }, { icon: Calendar, label: "5 Weeks" }, { icon: Lightbulb, label: "Beginner Friendly" }].map((item, i) => (
-              <div key={i} className="bg-[#1a1d24] border border-white/[0.07] rounded-xl p-4 md:p-6 text-center hover:bg-[#1f2330] transition-colors duration-200">
-                <item.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-[#1e90ff]" />
-                <span className="text-xs md:text-sm text-[#A7ABB3]">{item.label}</span>
-              </div>
+	              <div key={i} className="bg-[#1a1d24] border border-white/[0.07] rounded-xl p-4 md:p-6 text-center">
+	                <item.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-[#1e90ff]" />
+	                <span className="text-xs md:text-sm text-[#A7ABB3]">{item.label}</span>
+	              </div>
             ))}
           </div>
         </div>
@@ -237,7 +248,7 @@ export default function EurekathonPage() {
               className="w-full h-auto"
             />
           </div>
-          <p className="text-center text-[#A7ABB3] text-sm mt-6">Platform preview - Track your progress and connect with mentors</p>
+          <p className="text-center text-[#A7ABB3] text-sm mt-6"></p>
         </div>
       </section>
 
@@ -272,10 +283,10 @@ export default function EurekathonPage() {
               { label: "CATEGORIES", value: "6", desc: "STEM subject areas", color: "#f5a623" },
               { label: "TRACKS", value: "2", desc: "Coding & Research", color: "#22c55e" },
             ].map((metric, i) => (
-              <div key={i} className="p-6 md:p-8 text-center bg-[#1a1d24] border border-white/[0.07] rounded-2xl hover:bg-[#1f2330] transition-all duration-200" style={{ borderColor: `${metric.color}22` }}>
-                <div className="text-[10px] md:text-xs uppercase tracking-[0.15em] mb-3 flex items-center justify-center gap-2" style={{ color: metric.color }}>
-                  {metric.label}
-                </div>
+	              <div key={i} className="p-6 md:p-8 text-center bg-[#1a1d24] border border-white/[0.07] rounded-2xl" style={{ borderColor: `${metric.color}22` }}>
+	                <div className="text-[10px] md:text-xs uppercase tracking-[0.15em] mb-3 flex items-center justify-center gap-2" style={{ color: metric.color }}>
+	                  {metric.label}
+	                </div>
                 <div className="font-serif leading-none font-medium" style={{ color: metric.color }}><AnimatedCounter value={metric.value} /></div>
                 <div className="text-[11px] md:text-xs text-[#A7ABB3] mt-3">{metric.desc}</div>
               </div>
@@ -437,10 +448,10 @@ export default function EurekathonPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {[{ title: "Coding Track", icon: Code, desc: "Build a functional prototype, app, website, simulation, or other coded solution. Perfect for developers and aspiring engineers.", items: ["Apps & websites", "AI models", "Simulations", "Technical solutions"] }, { title: "Research Track", icon: FileText, desc: "Conduct background research and create a literature review, theoretical framework, or experimental design around your chosen problem.", items: ["Literature reviews", "Experimental designs", "Theoretical frameworks", "Data analysis"] }].map((track, i) => (
-              <div key={i} className={`rounded-2xl p-8 md:p-10 border transition-all duration-200 ${selectedTrack === i ? "bg-[#1f2330] border-[#1e90ff]/30" : "bg-[#1a1d24] border-white/[0.07] hover:bg-[#1f2330] hover:border-white/15"}`}>
-                <track.icon className={`w-10 h-10 mb-6 ${selectedTrack === i ? "text-[#1e90ff]" : "text-[#1e90ff]/60"}`} />
-                <h3 className="text-xl md:text-2xl font-medium mb-4">{track.title}</h3>
-                <p className="text-[#A7ABB3] text-sm md:text-base leading-relaxed mb-6">{track.desc}</p>
+	              <div key={i} className={`rounded-2xl p-8 md:p-10 border transition-all duration-200 ${selectedTrack === i ? "bg-[#1f2330] border-[#1e90ff]/30" : "bg-[#1a1d24] border-white/[0.07]"}`}>
+	                <track.icon className={`w-10 h-10 mb-6 ${selectedTrack === i ? "text-[#1e90ff]" : "text-[#1e90ff]/60"}`} />
+	                <h3 className="text-xl md:text-2xl font-medium mb-4">{track.title}</h3>
+	                <p className="text-[#A7ABB3] text-sm md:text-base leading-relaxed mb-6">{track.desc}</p>
                 <ul className="space-y-2">
                   {track.items.map((item, j) => (<li key={j} className="flex items-center gap-2 text-sm text-[#A7ABB3]">{item}</li>))}
                 </ul>
@@ -457,10 +468,10 @@ export default function EurekathonPage() {
             {categories.map((cat, i) => {
               const catColor = i % 3 === 0 ? "#1e90ff" : i % 3 === 1 ? "#f5a623" : "#22c55e"
               return (
-              <div key={i} className="bg-[#1a1d24] rounded-xl p-4 md:p-6 flex items-center gap-3 border border-white/[0.07] hover:bg-[#1f2330] transition-all duration-200" style={{ borderColor: `${catColor}22` }}>
-                <cat.icon className="w-5 h-5 flex-shrink-0" style={{ color: catColor }} />
-                <span className="text-sm md:text-base">{cat.name}</span>
-              </div>
+	              <div key={i} className="bg-[#1a1d24] rounded-xl p-4 md:p-6 flex items-center gap-3 border border-white/[0.07]" style={{ borderColor: `${catColor}22` }}>
+	                <cat.icon className="w-5 h-5 flex-shrink-0" style={{ color: catColor }} />
+	                <span className="text-sm md:text-base">{cat.name}</span>
+	              </div>
               )
             })}
           </div>
@@ -488,11 +499,11 @@ export default function EurekathonPage() {
               { icon: Star, title: "Track Winners", desc: "Category-specific prizes for top performers in Coding and Research tracks", color: "#f5a623" },
               { icon: Rocket, title: "All Participants", desc: "Certificates, exclusive swag, and networking opportunities for everyone who submits", color: "#22c55e" },
             ].map((prize, i) => (
-              <div key={i} className="bg-[#1a1d24] rounded-2xl p-8 border border-white/[0.07] hover:bg-[#1f2330] transition-all duration-200 text-center" style={{ borderColor: `${prize.color}22` }}>
-                <prize.icon className="w-10 h-10 mx-auto mb-6" style={{ color: prize.color }} />
-                <h3 className="text-xl font-medium mb-3">{prize.title}</h3>
-                <p className="text-[#A7ABB3] text-sm leading-relaxed">{prize.desc}</p>
-              </div>
+	              <div key={i} className="bg-[#1a1d24] rounded-2xl p-8 border border-white/[0.07] text-center" style={{ borderColor: `${prize.color}22` }}>
+	                <prize.icon className="w-10 h-10 mx-auto mb-6" style={{ color: prize.color }} />
+	                <h3 className="text-xl font-medium mb-3">{prize.title}</h3>
+	                <p className="text-[#A7ABB3] text-sm leading-relaxed">{prize.desc}</p>
+	              </div>
             ))}
           </div>
         </div>
@@ -512,10 +523,10 @@ export default function EurekathonPage() {
 
           <div className="space-y-6">
             {[{ week: "Week 1", title: "Opening Ceremony & Ideation", items: ["Opening Ceremony", "Mission & Goals", "Design Thinking & Idea Selection", "Subject Workshops (CS, AI, Medical)"] }, { week: "Week 2", title: "Workshops & Team Development", items: ["Continued workshops", "Team development", "Mentorship sessions"] }, { week: "Week 3", title: "Presentation Prep", items: ["How to Pitch Workshop", "Presentation Prep Workshop", "Project feedback sessions"] }, { week: "Week 4", title: "Solution Development", items: ["Asynchronous work time", "Office hours", "One-on-one mentoring"] }, { week: "Week 5", title: "Submissions & Awards", items: ["Project Submissions (max 4-min video)", "Judging", "Award & Closing Ceremony", "Guest Speaker Panel"] }].map((week, i) => (
-              <div key={i} className="bg-[#1a1d24] rounded-2xl p-6 md:p-8 border border-white/[0.07] hover:bg-[#1f2330] hover:border-[#1e90ff]/20 transition-all duration-200">
-                <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-                  <div className="flex-shrink-0"><span className="inline-block px-4 py-2 rounded-full border border-[#f5a623]/30 text-[#f5a623] text-sm font-medium">{week.week}</span></div>
-                  <div className="flex-1">
+	              <div key={i} className="bg-[#1a1d24] rounded-2xl p-6 md:p-8 border border-white/[0.07]">
+	                <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+	                  <div className="flex-shrink-0"><span className="inline-block px-4 py-2 rounded-full border border-[#f5a623]/30 text-[#f5a623] text-sm font-medium">{week.week}</span></div>
+	                  <div className="flex-1">
                     <h3 className="text-lg md:text-xl font-medium mb-3">{week.title}</h3>
                     <ul className="flex flex-wrap gap-2">{week.items.map((item, j) => (<li key={j} className="text-xs md:text-sm text-[#A7ABB3] bg-[#1f2330] border border-white/[0.06] px-3 py-1 rounded-full">{item}</li>))}</ul>
                   </div>
@@ -536,16 +547,16 @@ export default function EurekathonPage() {
             <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 text-balance">
               Got <span className="text-[#22c55e]">questions</span>?
             </h2>
-            <p className="text-[#A7ABB3] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">Everything you need to know about Eurekathon 2025</p>
+            <p className="text-[#A7ABB3] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">Everything you need to know about Eurekathon 2026</p>
           </div>
 
           <div className="space-y-4">
             {[{ question: "Who can participate in Eurekathon?", answer: "Eurekathon is open to high school students aged 13-19 from all countries worldwide. You can compete individually or with a team of up to 4 members." }, { question: "Do I need coding experience to participate?", answer: "Not at all! We offer two tracks - a Coding Track for those who want to build technical solutions, and a Research Track for those who prefer literature reviews, theoretical frameworks, or experimental designs. We also provide workshops throughout the competition to help beginners learn." }, { question: "What do I need to submit?", answer: "You need to submit a project video (max 4 minutes), a written project description, and either code documentation (for Coding Track with a GitHub repo link) or a research PDF (for Research Track). Live demos are recommended but not required for coding projects." }, { question: "Can I use AI tools in my project?", answer: "AI use for writing code/research documents is allowed but discouraged. AI use for ideation and support is encouraged. Quality is a judging criteria, so make sure your work demonstrates genuine understanding and effort." }, { question: "Are projects created before the hackathon permitted?", answer: "Yes, projects created before the hackathon timeframe are permitted, however they will receive a point deduction during judging." }, { question: "How do I join and stay updated?", answer: "Join our Discord server for announcements, workshops, and updates. You can also follow us on Instagram. For any questions, email us at eureka.institute.contact@gmail.com or ask in the Questions channel on Discord." }].map((faq, i) => (
-              <div key={i} className="bg-[#1a1d24] border border-white/[0.07] rounded-xl overflow-hidden transition-all duration-200 hover:bg-[#1f2330] hover:border-white/15">
-                <button onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
-                  <span className="text-base md:text-lg font-medium pr-4">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 flex-shrink-0 text-[#A7ABB3] transition-transform duration-300 ${openFaqIndex === i ? "rotate-180" : ""}`} />
-                </button>
+	              <div key={i} className="bg-[#1a1d24] border border-white/[0.07] rounded-xl overflow-hidden">
+	                <button onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
+	                  <span className="text-base md:text-lg font-medium pr-4">{faq.question}</span>
+	                  <ChevronDown className={`w-5 h-5 flex-shrink-0 text-[#A7ABB3] transition-transform duration-300 ${openFaqIndex === i ? "rotate-180" : ""}`} />
+	                </button>
                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === i ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
                   <p className="px-6 pb-6 text-sm md:text-base text-[#A7ABB3] leading-relaxed">{faq.answer}</p>
                 </div>
@@ -562,7 +573,7 @@ export default function EurekathonPage() {
             Ready to innovate?
           </div>
           <h2 className="font-serif text-[40px] leading-[1.15] md:text-[64px] md:leading-[1.1] font-medium mb-6 text-balance">Join the global innovation movement</h2>
-          <p className="text-[#A7ABB3] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">Code, research, and win prizes. Join hundreds of students from around the world in Eurekathon 2025.</p>
+          <p className="text-[#A7ABB3] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">Code, research, and win prizes. Join hundreds of students from around the world in Eurekathon 2026.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer">
               <Button className="text-base rounded-full bg-[#1e90ff] hover:bg-[#1a7fe0] text-white font-medium transition-colors duration-200 px-8 py-6">Join Discord Server</Button>
@@ -579,8 +590,8 @@ export default function EurekathonPage() {
         <div className="max-w-[1120px] w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
             <div className="flex flex-col gap-4">
-              <div className="text-lg font-semibold font-mono">EUREKATHON 2025</div>
-              <p className="text-xs text-[#A7ABB3] leading-relaxed">A 5-week global innovation challenge by Eureka Institute and Ignite STEAM Club.</p>
+              <div className="text-lg font-semibold font-mono">EUREKATHON sTEM 2026</div>
+              <p className="text-xs text-[#A7ABB3] leading-relaxed">A 5-week global innovation challenge by Eureka Institute.</p>
               <div className="flex items-center gap-4 mt-2">
                 <a href="https://www.instagram.com/eureka.institute.npo/" target="_blank" rel="noopener noreferrer" className="text-[#A7ABB3] hover:text-[#1e90ff] transition-colors" aria-label="Instagram">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -622,7 +633,7 @@ export default function EurekathonPage() {
           </div>
 
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#A7ABB3]">
-            <div>2025 Eureka Institute. All rights reserved.</div>
+            <div>2026 Eureka Institute. All rights reserved.</div>
             <div className="flex gap-6">
               <a href="https://www.eurekainstitute.xyz/" target="_blank" rel="noopener noreferrer" className="hover:text-[#F2F3F5] transition-colors">Eureka Institute</a>
               <a href="https://www.instagram.com/eureka.institute.npo/" target="_blank" rel="noopener noreferrer" className="hover:text-[#F2F3F5] transition-colors">Instagram</a>
