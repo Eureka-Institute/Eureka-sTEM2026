@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Lexend, Roboto_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" })
@@ -35,7 +36,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#0B0C0F",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B0C0F" },
+  ],
 }
 
 export default function RootLayout({
@@ -44,10 +48,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-[#0B0C0F]">
-      <body className={`${lexend.variable} ${robotoSerif.variable} font-sans antialiased bg-[#0B0C0F]`}>
-        {children}
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${lexend.variable} ${robotoSerif.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )

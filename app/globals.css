@@ -4,17 +4,83 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Page design tokens (light defaults) */
+  --bg-primary: #ffffff;
+  --text-primary: #0b0c0f;
+  --text-secondary: #4b5563;
+  --surface-1: #f3f4f6;
+  --surface-2: #e5e7eb;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --menu-bg: rgba(255, 255, 255, 0.95);
+  --hero-overlay: rgba(255, 255, 255, 0.68);
+  --border-subtle: rgba(0, 0, 0, 0.10);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  --chip-bg: rgba(0, 0, 0, 0.04);
+  --chip-border: rgba(0, 0, 0, 0.08);
+
   /* Eurekathon Design Tokens - Dodgerblue Theme */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --accent-blue: #003b76;
+  --accent-cyan: #00303f;
+  --accent-light: #87ceeb;
+
+  /* Shadcn-style semantic tokens (light) */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(29.142% 0.15355 263.419);
+  --chart-2: oklch(36.225% 0.07734 163.411);
+  --chart-3: oklch(49.402% 0.10922 66.9);
+  --chart-4: oklch(36.562% 0.19632 299.019);
+  --chart-5: oklch(30.343% 0.12148 17.07);
+  --radius: 1.75rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  /* Page design tokens (dark) */
   --bg-primary: #0b0c0f;
   --text-primary: #f2f3f5;
   --text-secondary: #a7abb3;
+  --surface-1: #1a1d24;
+  --surface-2: #1f2330;
+  --nav-bg: rgba(11, 12, 15, 0.82);
+  --menu-bg: rgba(11, 12, 15, 0.95);
+  --hero-overlay: rgba(11, 12, 15, 0.70);
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --chip-bg: rgba(255, 255, 255, 0.06);
+  --chip-border: rgba(255, 255, 255, 0.08);
+
+  /* Eurekathon Design Tokens - Dodgerblue Theme */
   --glass-bg: rgba(15, 17, 23, 0.3);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --accent-blue: #1e90ff;
-  --accent-cyan: #00bfff;
-  --accent-light: #87ceeb;
 
-  /* Original tokens for compatibility */
+  /* Shadcn-style semantic tokens (dark) */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
@@ -34,12 +100,6 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --radius: 1.75rem;
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
