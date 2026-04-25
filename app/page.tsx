@@ -237,21 +237,6 @@ export default function EurekathonPage() {
         </div>
       </section>
 
-      {/* Dashboard Preview Section */}
-      <section className="relative py-12 md:py-20 px-4 animate-on-scroll">
-        <div className="max-w-[1200px] w-full mx-auto">
-	          <div className="relative rounded-2xl overflow-hidden border border-[color:var(--border-subtle)] shadow-2xl dashboard-image">
-            <Image
-              src="https://thumbs.dreamstime.com/b/programming-code-abstract-technology-background-software-deve-developer-computer-script-96434780.jpg"
-              alt="Eurekathon Platform Preview"
-              width={1200}
-              height={675}
-              className="w-full h-auto"
-            />
-          </div>
-	          <p className="text-center text-[var(--text-secondary)] text-sm mt-6"></p>
-        </div>
-      </section>
 
       {/* Partner Logos Marquee */}
 	      <section className="relative py-12 md:py-16 px-4 animate-on-scroll border-y border-[color:var(--border-subtle)]">
