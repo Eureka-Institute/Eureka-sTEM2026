@@ -9,10 +9,10 @@ const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" })
 const robotoSerif = Roboto_Serif({ subsets: ["latin"], variable: "--font-roboto-serif" })
 
 export const metadata: Metadata = {
-  title: "Eurekathon sTEM",
+  title: "STEM 26",
   description:
-    "Eurekathon sTEM 2026 by Eureka Institute",
-  generator: "eurekathon-stem",
+    "STEM 26 by Univa Dev and Eureka Institute",
+  generator: "stem-26",
   icons: {
     icon: [
       {

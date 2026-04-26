@@ -61,7 +61,7 @@ const partnerLogos = [
   { src: "/logos/frame-55.png", alt: "Partner 8" },
 ]
 
-export default function EurekathonPage() {
+export default function Stem26Page() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollY, setScrollY] = useState(0)
@@ -153,16 +153,29 @@ export default function EurekathonPage() {
 	              className="flex items-center -ml-1 hover:opacity-90 transition-opacity duration-200"
 	              aria-label="Scroll to top"
 	            >
-	              <Image
-	                src="/eureka-logo.png"
-	                alt="Eureka"
-	                width={160}
-	                height={36}
-	                priority
-	                className="h-8 w-auto md:h-9"
-	              />
-	              <span className="ml-3 text-sm md:text-base font-semibold tracking-wide">
-	                Eureka Institute
+		              <Image
+		                src="/univadev.svg"
+		                alt="Univa Dev"
+		                width={140}
+		                height={36}
+		                unoptimized
+		                className="h-7 w-auto md:h-8"
+		              />
+		              <Image
+		                src="/eureka-logo.png"
+		                alt="Eureka"
+		                width={160}
+		                height={36}
+		                priority
+		                className="ml-3 h-8 w-auto md:h-9"
+		              />
+	              <span className="ml-3 flex flex-col leading-tight">
+	                <span className="text-sm md:text-base font-semibold tracking-wide">
+	                  STEM 26
+	                </span>
+	                <span className="hidden sm:block text-[10px] md:text-xs text-[var(--text-secondary)]">
+	                  by Univa Dev and Eureka Institute
+	                </span>
 	              </span>
 	            </button>
 
@@ -204,8 +217,8 @@ export default function EurekathonPage() {
 
         <div className="max-w-[1120px] w-full mx-auto relative z-10" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
           <div className="text-center mb-8 md:mb-12">
-	            <div className="inline-flex items-center gap-2 bg-[var(--surface-1)] border border-[color:var(--border-subtle)] px-4 py-2 rounded-full mb-6 text-xs md:text-sm text-[var(--text-secondary)] stagger-reveal">
-                            September 27 - October 25, 2026
+	            <div className="inline-flex items-center gap-2 bg-[var(--surface-1)] px-4 py-2 rounded-full mb-6 text-xs md:text-sm text-[var(--text-secondary)] stagger-reveal">
+                            June 15 - July 12
             </div>
             <h1 className="font-serif text-[44px] leading-[1.1] md:text-[72px] md:leading-[1.05] font-medium mb-6 text-balance">
               <span className={`block stagger-reveal text-5xl font-light transition-all duration-500 md:text-7xl ${wordFade ? "opacity-100 blur-0" : "opacity-0 blur-lg"}`}>
@@ -227,7 +240,7 @@ export default function EurekathonPage() {
           </div>
 
           <div className="mt-12 md:mt-16 stagger-reveal grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" style={{ animationDelay: "360ms" }}>
-            {[{ icon: Globe, label: "Online Event" }, { icon: Users, label: "Ages 13-19" }, { icon: Calendar, label: "5 Weeks" }, { icon: Lightbulb, label: "Beginner Friendly" }].map((item, i) => (
+            {[{ icon: Globe, label: "Online Event" }, { icon: Users, label: "Ages 13-18" }, { icon: Calendar, label: "5 Weeks" }, { icon: Lightbulb, label: "Beginner Friendly" }].map((item, i) => (
 		              <div key={i} className="bg-[var(--surface-1)] rounded-xl p-4 md:p-6 text-center">
 		                <item.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-[color:var(--accent-blue)]" />
 		                <span className="text-xs md:text-sm text-[var(--text-secondary)]">{item.label}</span>
@@ -261,11 +274,11 @@ export default function EurekathonPage() {
             Innovation <span className="text-[color:var(--accent-blue)]">Without Limits</span>
           </h2>
 	          <p className="text-[var(--text-secondary)] text-sm md:text-base mb-12 md:mb-16 text-center max-w-[700px] mx-auto leading-relaxed">
-	            Eurekathon combines the spirit of a science fair with the creativity of a hackathon. Whether you want to code, research, or both - this is your chance to innovate across multiple categories and share your vision with a global community.
+		            STEM 26 combines the spirit of a science fair with the creativity of a hackathon. Whether you want to code, research, or both - this is your chance to innovate across multiple categories and share your vision with a global community.
 	          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-[900px] mx-auto">
             {[
-              { label: "PARTICIPANTS", value: "237+", desc: "from around the world", color: "var(--accent-blue)" },
+              { label: "PARTICIPANTS", value: "320+", desc: "from around the world", color: "var(--accent-blue)" },
               { label: "CATEGORIES", value: "6", desc: "STEM subject areas", color: "var(--accent-orange)" },
               { label: "TRACKS", value: "2", desc: "Coding & Research", color: "var(--accent-violet)" },
             ].map((metric, i) => (
@@ -409,7 +422,7 @@ export default function EurekathonPage() {
               Innovators from <span className="text-[color:var(--accent-blue)]">around the world</span>
             </h2>
 	            <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">
-	              Join 237+ participants from across the globe in a truly international innovation challenge
+	              Join 320+ participants from across the globe in a truly international innovation challenge
 	            </p>
 	          </div>
 	          <div className="relative rounded-2xl overflow-hidden p-4 md:p-8 bg-[var(--surface-1)]">
@@ -554,11 +567,11 @@ export default function EurekathonPage() {
             <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 text-balance">
               Got <span className="text-[color:var(--accent-violet)]">questions</span>?
             </h2>
-	            <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">Everything you need to know about Eurekathon 2026</p>
+	            <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">Everything you need to know about STEM 26</p>
           </div>
 
           <div className="space-y-4">
-            {[{ question: "Who can participate in Eurekathon?", answer: "Eurekathon is open to high school students aged 13-19 from all countries worldwide. You can compete individually or with a team of up to 4 members." }, { question: "Do I need coding experience to participate?", answer: "Not at all! We offer two tracks - a Coding Track for those who want to build technical solutions, and a Research Track for those who prefer literature reviews, theoretical frameworks, or experimental designs. We also provide workshops throughout the competition to help beginners learn." }, { question: "What do I need to submit?", answer: "You need to submit a project video (max 4 minutes), a written project description, and either code documentation (for Coding Track with a GitHub repo link) or a research PDF (for Research Track). Live demos are recommended but not required for coding projects." }, { question: "Can I use AI tools in my project?", answer: "AI use for writing code/research documents is allowed but discouraged. AI use for ideation and support is encouraged. Quality is a judging criteria, so make sure your work demonstrates genuine understanding and effort." }, { question: "Are projects created before the hackathon permitted?", answer: "Yes, projects created before the hackathon timeframe are permitted, however they will receive a point deduction during judging." }, { question: "How do I join and stay updated?", answer: "Join our Discord server for announcements, workshops, and updates. You can also follow us on Instagram. For any questions, email us at eureka.institute.contact@gmail.com or ask in the Questions channel on Discord." }].map((faq, i) => (
+	            {[{ question: "Who can participate in STEM 26?", answer: "STEM 26 is open to high school students aged 13-18 from all countries worldwide. You can compete individually or with a team of up to 4 members." }, { question: "Do I need coding experience to participate?", answer: "Not at all! We offer two tracks - a Coding Track for those who want to build technical solutions, and a Research Track for those who prefer literature reviews, theoretical frameworks, or experimental designs. We also provide workshops throughout the competition to help beginners learn." }, { question: "What do I need to submit?", answer: "You need to submit a project video (max 4 minutes), a written project description, and either code documentation (for Coding Track with a GitHub repo link) or a research PDF (for Research Track). Live demos are recommended but not required for coding projects." }, { question: "Can I use AI tools in my project?", answer: "AI use for writing code/research documents is allowed but discouraged. AI use for ideation and support is encouraged. Quality is a judging criteria, so make sure your work demonstrates genuine understanding and effort." }, { question: "Are projects created before the hackathon permitted?", answer: "Yes, projects created before the event timeframe are permitted, however they will receive a point deduction during judging." }, { question: "How do I join and stay updated?", answer: "Join our Discord server for announcements, workshops, and updates. You can also follow us on Instagram. For any questions, email us at eureka.institute.contact@gmail.com or ask in the Questions channel on Discord." }].map((faq, i) => (
 		              <div key={i} className="bg-[var(--surface-1)] rounded-xl overflow-hidden">
 		                <button onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
 		                  <span className="text-base md:text-lg font-medium pr-4">{faq.question}</span>
@@ -576,17 +589,14 @@ export default function EurekathonPage() {
       {/* CTA Section */}
       <section id="cta" className="relative py-24 md:py-40 px-4 animate-on-scroll overflow-hidden bg-[var(--bg-primary)]">
         <div className="max-w-[800px] w-full mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-[var(--surface-1)] border border-[color:var(--border-subtle)] px-4 py-2 rounded-full mb-8 text-xs md:text-sm text-[var(--text-secondary)]">
+          <div className="inline-flex items-center gap-2 bg-[var(--surface-1)] px-4 py-2 rounded-full mb-8 text-xs md:text-sm text-[var(--text-secondary)]">
             Ready to innovate?
           </div>
           <h2 className="font-serif text-[40px] leading-[1.15] md:text-[64px] md:leading-[1.1] font-medium mb-6 text-balance">Join the global innovation movement</h2>
-          <p className="text-[var(--text-secondary)] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">Code, research, and win prizes. Join hundreds of students from around the world in Eurekathon 2026.</p>
+          <p className="text-[var(--text-secondary)] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">Code, research, and win prizes. Join hundreds of students from around the world in STEM 26.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer">
               <Button className="text-base rounded-full bg-[color:var(--accent-blue)] hover:opacity-90 text-[color:var(--on-accent-blue)] font-medium transition-opacity duration-200 px-8 py-6">Join Discord Server</Button>
-            </a>
-            <a href="https://www.eurekainstitute.xyz/" target="_blank" rel="noopener noreferrer">
-              <Button className="text-base rounded-full bg-transparent border border-[color:var(--border-strong)] hover:bg-[var(--chip-bg)] hover:border-[color:var(--border-strong)] transition-all duration-200 text-[var(--text-primary)] px-8 py-6">Visit Eureka Institute</Button>
             </a>
           </div>
         </div>
@@ -597,19 +607,45 @@ export default function EurekathonPage() {
         <div className="max-w-[1120px] w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
             <div className="flex flex-col gap-4">
-              <div className="text-lg font-semibold font-mono">EUREKATHON sTEM 2026</div>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">A 5-week global innovation challenge by Eureka Institute.</p>
-              <div className="flex items-center gap-4 mt-2">
-                <a href="https://www.instagram.com/eureka.institute.npo/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Instagram">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Discord">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
-                </a>
-                <a href="https://www.youtube.com/@eurekainstitute0" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="YouTube">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/company/eureka-institute-npo/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="LinkedIn"><Linkedin className="w-5 h-5" /></a>
+              <div className="text-lg font-semibold font-mono">STEM 26</div>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">by Eureka Institute and Univa Dev</p>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-2">Eureka Institute</div>
+                  <div className="flex items-center gap-4">
+                    <a href="https://www.instagram.com/eureka.institute.npo/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Eureka Institute Instagram">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@eurekainstitute0" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Eureka Institute YouTube">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/eureka-institute-npo/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Eureka Institute LinkedIn">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-2">Univa Dev</div>
+                  <div className="flex items-center gap-4">
+                    <a href="https://www.instagram.com/univadev/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Univa Dev Instagram">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://univadev.com/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Univa Dev Website">
+                      <Globe className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/univa-dev/" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="Univa Dev LinkedIn">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-2">STEM 26</div>
+                  <div className="flex items-center gap-4">
+                    <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="STEM 26 Discord">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -639,15 +675,14 @@ export default function EurekathonPage() {
             </div>
           </div>
 
-          <div className="border-t border-[color:var(--border-subtle)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--text-secondary)]">
-            <div>2026 Eureka Institute. All rights reserved.</div>
-            <div className="flex items-center gap-6">
-              <a href="https://www.eurekainstitute.xyz/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">Eureka Institute</a>
-              <a href="https://www.instagram.com/eureka.institute.npo/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">Instagram</a>
-              <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">Discord</a>
-              <ThemeToggle />
-            </div>
-          </div>
+	          <div className="border-t border-[color:var(--border-subtle)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--text-secondary)]">
+	            <div>2026 Univa Dev and Eureka Institute</div>
+	            <div className="flex items-center gap-6">
+	              <a href="https://www.eurekainstitute.xyz/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">Eureka Institute</a>
+	              <a href="https://univadev.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--text-primary)] transition-colors">Univa Dev</a>
+	               <ThemeToggle />
+	            </div>
+	          </div>
         </div>
       </footer>
     </div>
