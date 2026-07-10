@@ -61,7 +61,7 @@ const partnerLogos = [
   { src: "/logos/frame-55.png", alt: "Partner 8" },
 ]
 
-export default function Stem26Page() {
+export default function EurekaDevPage() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollY, setScrollY] = useState(0)
@@ -171,7 +171,7 @@ export default function Stem26Page() {
 		              />
 	              <span className="ml-3 flex flex-col leading-tight">
 	                <span className="text-sm md:text-base font-semibold tracking-wide">
-	                  STEM 26
+	                  EurekaDev
 	                </span>
 	                <span className="hidden sm:block text-[10px] md:text-xs text-[var(--text-secondary)]">
 	                  by Univa Dev and Eureka Institute
@@ -185,6 +185,7 @@ export default function Stem26Page() {
 	              <button onClick={() => scrollToSection("schedule")} className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Schedule</button>
 	              <button onClick={() => scrollToSection("faq")} className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">FAQ</button>
 	              <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Discord</a>
+	              <a href="https://eurekadev.devpost.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300">Devpost</a>
 	            </nav>
 
 	            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden ml-auto p-2 hover:bg-[var(--chip-bg)] rounded-lg transition-colors duration-300" aria-label="Toggle menu">
@@ -206,6 +207,7 @@ export default function Stem26Page() {
 	            <button onClick={() => scrollToSection("schedule")} className="font-serif text-5xl md:text-7xl font-light text-[var(--text-primary)] hover:text-[color:var(--accent-blue)] transition-colors duration-300">Schedule</button>
 	            <button onClick={() => scrollToSection("faq")} className="font-serif text-5xl md:text-7xl font-light text-[var(--text-primary)] hover:text-[color:var(--accent-blue)] transition-colors duration-300">FAQ</button>
 	            <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="font-serif text-5xl md:text-7xl font-light text-[var(--text-primary)] hover:text-[color:var(--accent-blue)] transition-colors duration-300">Discord</a>
+	            <a href="https://eurekadev.devpost.com/" target="_blank" rel="noopener noreferrer" className="font-serif text-5xl md:text-7xl font-light text-[var(--text-primary)] hover:text-[color:var(--accent-blue)] transition-colors duration-300">Devpost</a>
 	          </div>
 	        </div>
 	      )}
@@ -218,7 +220,7 @@ export default function Stem26Page() {
         <div className="max-w-[1120px] w-full mx-auto relative z-10" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
           <div className="text-center mb-8 md:mb-12">
 	            <div className="inline-flex items-center gap-2 bg-[var(--surface-1)] px-4 py-2 rounded-full mb-6 text-xs md:text-sm text-[var(--text-secondary)] stagger-reveal">
-                            June 15 - July 12
+                            September 27 – October 25
             </div>
             <h1 className="font-serif text-[44px] leading-[1.1] md:text-[72px] md:leading-[1.05] font-medium mb-6 text-balance">
               <span className={`block stagger-reveal text-5xl font-light transition-all duration-500 md:text-7xl ${wordFade ? "opacity-100 blur-0" : "opacity-0 blur-lg"}`}>
@@ -232,15 +234,18 @@ export default function Stem26Page() {
               A 5-week global innovation challenge blending science fairs and hackathons. Research or code your way to innovation across multiple STEM tracks!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center stagger-reveal" style={{ animationDelay: "270ms" }}>
+              <a href="https://eurekadev.devpost.com/" target="_blank" rel="noopener noreferrer">
+                <Button className="px-8 py-6 text-base rounded-full bg-[color:var(--accent-blue)] hover:opacity-90 text-[color:var(--on-accent-blue)] font-medium transition-opacity duration-200">Register on Devpost</Button>
+              </a>
               <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer">
-                <Button className="px-8 py-6 text-base rounded-full bg-[color:var(--accent-blue)] hover:opacity-90 text-[color:var(--on-accent-blue)] font-medium transition-opacity duration-200">Join Discord</Button>
+                <Button className="px-8 py-6 text-base rounded-full bg-transparent border border-[color:var(--border-strong)] hover:bg-[var(--chip-bg)] hover:border-[color:var(--border-strong)] transition-all duration-200 text-[var(--text-primary)]">Join Discord</Button>
               </a>
 	              <Button onClick={() => scrollToSection("about")} className="px-8 py-6 text-base rounded-full bg-transparent border border-[color:var(--border-strong)] hover:bg-[var(--chip-bg)] hover:border-[color:var(--border-strong)] transition-all duration-200 text-[var(--text-primary)]">Learn More</Button>
             </div>
           </div>
 
           <div className="mt-12 md:mt-16 stagger-reveal grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" style={{ animationDelay: "360ms" }}>
-            {[{ icon: Globe, label: "Online Event" }, { icon: Users, label: "Ages 13-18" }, { icon: Calendar, label: "5 Weeks" }, { icon: Lightbulb, label: "Beginner Friendly" }].map((item, i) => (
+            {[{ icon: Globe, label: "Online Event" }, { icon: Users, label: "Ages 13-19" }, { icon: Calendar, label: "5 Weeks" }, { icon: Lightbulb, label: "Beginner Friendly" }].map((item, i) => (
 		              <div key={i} className="bg-[var(--surface-1)] rounded-xl p-4 md:p-6 text-center">
 		                <item.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-[color:var(--accent-blue)]" />
 		                <span className="text-xs md:text-sm text-[var(--text-secondary)]">{item.label}</span>
@@ -274,7 +279,7 @@ export default function Stem26Page() {
             Innovation <span className="text-[color:var(--accent-blue)]">Without Limits</span>
           </h2>
 	          <p className="text-[var(--text-secondary)] text-sm md:text-base mb-12 md:mb-16 text-center max-w-[700px] mx-auto leading-relaxed">
-		            STEM 26 combines the spirit of a science fair with the creativity of a hackathon. Whether you want to code, research, or both - this is your chance to innovate across multiple categories and share your vision with a global community.
+		            EurekaDev combines the spirit of a science fair with the creativity of a hackathon. Whether you want to code, research, or both - this is your chance to innovate across multiple categories and share your vision with a global community.
 	          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-[900px] mx-auto">
             {[
@@ -567,11 +572,11 @@ export default function Stem26Page() {
             <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 text-balance">
               Got <span className="text-[color:var(--accent-violet)]">questions</span>?
             </h2>
-	            <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">Everything you need to know about STEM 26</p>
+	            <p className="text-[var(--text-secondary)] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">Everything you need to know about EurekaDev</p>
           </div>
 
           <div className="space-y-4">
-	            {[{ question: "Who can participate in STEM 26?", answer: "STEM 26 is open to high school students aged 13-18 from all countries worldwide. You can compete individually or with a team of up to 4 members." }, { question: "Do I need coding experience to participate?", answer: "Not at all! We offer two tracks - a Coding Track for those who want to build technical solutions, and a Research Track for those who prefer literature reviews, theoretical frameworks, or experimental designs. We also provide workshops throughout the competition to help beginners learn." }, { question: "What do I need to submit?", answer: "You need to submit a project video (max 4 minutes), a written project description, and either code documentation (for Coding Track with a GitHub repo link) or a research PDF (for Research Track). Live demos are recommended but not required for coding projects." }, { question: "Can I use AI tools in my project?", answer: "AI use for writing code/research documents is allowed but discouraged. AI use for ideation and support is encouraged. Quality is a judging criteria, so make sure your work demonstrates genuine understanding and effort." }, { question: "Are projects created before the hackathon permitted?", answer: "Yes, projects created before the event timeframe are permitted, however they will receive a point deduction during judging." }, { question: "How do I join and stay updated?", answer: "Join our Discord server for announcements, workshops, and updates. You can also follow us on Instagram. For any questions, email us at eureka.institute.contact@gmail.com or ask in the Questions channel on Discord." }].map((faq, i) => (
+	            {[{ question: "Who can participate in EurekaDev?", answer: "EurekaDev is open to high school students aged 13-19 from all countries worldwide. You can compete individually or with a team of up to 4 teammates." }, { question: "Do I need coding experience to participate?", answer: "Not at all! We offer two tracks - a Coding Track for those who want to build technical solutions, and a Research Track for those who prefer literature reviews, theoretical frameworks, or experimental designs. We also provide workshops throughout the competition to help beginners learn." }, { question: "What do I need to submit?", answer: "You need to submit a project video (max 4 minutes), a written project description, and either code documentation (for Coding Track with a GitHub repo link) or a research PDF (for Research Track). Live demos are recommended but not required for coding projects." }, { question: "Can I use AI tools in my project?", answer: "AI use for writing code/research documents is allowed but discouraged. AI use for ideation and support is encouraged. Quality is a judging criteria, so make sure your work demonstrates genuine understanding and effort." }, { question: "Are projects created before the hackathon permitted?", answer: "Yes, projects created before the event timeframe are permitted, however they will receive a point deduction during judging." }, { question: "How do I join and stay updated?", answer: "Register on our Devpost page, then join our Discord server for announcements, workshops, and updates — joining the Discord is required to be eligible for prizes. You can also follow us on Instagram. For any questions, email us at eureka.institute.contact@gmail.com or ask in the Questions channel on Discord." }].map((faq, i) => (
 		              <div key={i} className="bg-[var(--surface-1)] rounded-xl overflow-hidden">
 		                <button onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)} className="w-full flex items-center justify-between p-6 text-left">
 		                  <span className="text-base md:text-lg font-medium pr-4">{faq.question}</span>
@@ -593,10 +598,13 @@ export default function Stem26Page() {
             Ready to innovate?
           </div>
           <h2 className="font-serif text-[40px] leading-[1.15] md:text-[64px] md:leading-[1.1] font-medium mb-6 text-balance">Join the global innovation movement</h2>
-          <p className="text-[var(--text-secondary)] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">Code, research, and win prizes. Join hundreds of students from around the world in STEM 26.</p>
+          <p className="text-[var(--text-secondary)] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">Code, research, and win prizes. Join hundreds of students from around the world in EurekaDev, September 27 – October 25.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://eurekadev.devpost.com/" target="_blank" rel="noopener noreferrer">
+              <Button className="text-base rounded-full bg-[color:var(--accent-blue)] hover:opacity-90 text-[color:var(--on-accent-blue)] font-medium transition-opacity duration-200 px-8 py-6">Register on Devpost</Button>
+            </a>
             <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer">
-              <Button className="text-base rounded-full bg-[color:var(--accent-blue)] hover:opacity-90 text-[color:var(--on-accent-blue)] font-medium transition-opacity duration-200 px-8 py-6">Join Discord Server</Button>
+              <Button className="text-base rounded-full bg-transparent border border-[color:var(--border-strong)] hover:bg-[var(--chip-bg)] hover:border-[color:var(--border-strong)] transition-all duration-200 text-[var(--text-primary)] px-8 py-6">Join Discord Server</Button>
             </a>
           </div>
         </div>
@@ -607,7 +615,7 @@ export default function Stem26Page() {
         <div className="max-w-[1120px] w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
             <div className="flex flex-col gap-4">
-              <div className="text-lg font-semibold font-mono">STEM 26</div>
+              <div className="text-lg font-semibold font-mono">EurekaDev</div>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">by Eureka Institute and Univa Dev</p>
               <div className="mt-4 space-y-4">
                 <div>
@@ -639,9 +647,9 @@ export default function Stem26Page() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-2">STEM 26</div>
+                  <div className="text-[10px] uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-2">EurekaDev</div>
                   <div className="flex items-center gap-4">
-                    <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="STEM 26 Discord">
+                    <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[color:var(--accent-blue)] transition-colors" aria-label="EurekaDev Discord">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
                     </a>
                   </div>
@@ -662,6 +670,7 @@ export default function Stem26Page() {
             <div className="flex flex-col gap-4">
               <div className="text-xs uppercase tracking-[0.15em] text-[var(--text-primary)] font-semibold mb-2">Resources</div>
               <div className="flex flex-col gap-3">
+                <a href="https://eurekadev.devpost.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Devpost Page</a>
                 <a href="https://www.eurekainstitute.xyz/" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Eureka Institute</a>
                 <a href="https://discord.gg/wECtZ3csKb" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Discord Server</a>
                 <a href="https://docs.google.com/document/d/1Y7UJF9GO88y6imqEjcE2kyPyv6QwieMmWFFdpY8GVAM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">Research Template</a>
