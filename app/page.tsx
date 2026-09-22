@@ -50,15 +50,12 @@ function AnimatedCounter({ value }: { value: string }) {
   )
 }
 
-const partnerLogos = [
-  { src: "/logos/frame-2.png", alt: "Partner 1" },
-  { src: "/logos/frame-3.png", alt: "Partner 2" },
-  { src: "/logos/frame-4.png", alt: "Partner 3" },
-  { src: "/logos/frame-6.png", alt: "Partner 4" },
-  { src: "/logos/frame-7.png", alt: "Partner 5" },
-  { src: "/logos/frame-8.png", alt: "Partner 6" },
-  { src: "/logos/frame-11.png", alt: "Partner 7" },
-  { src: "/logos/frame-55.png", alt: "Partner 8" },
+const sponsorLogos = [
+  { src: "/logos/sponsors/codecrafters.png", alt: "CodeCrafters", className: "h-10 md:h-12" },
+  { src: "/logos/sponsors/nordvpn.png", alt: "NordVPN", className: "h-20 md:h-24" },
+  { src: "/logos/sponsors/nordpass.png", alt: "NordPass", className: "h-10 md:h-12" },
+  { src: "/logos/sponsors/incogni.png", alt: "Incogni", className: "h-16 md:h-20" },
+  { src: "/logos/sponsors/saily.png", alt: "Saily", className: "h-16 md:h-20" },
 ]
 
 export default function EurekaDevPage() {
@@ -259,12 +256,12 @@ export default function EurekaDevPage() {
       {/* Partner Logos Marquee */}
 	      <section className="relative py-12 md:py-16 px-4 animate-on-scroll border-y border-[color:var(--border-subtle)]">
 	        <div className="max-w-[1120px] w-full mx-auto">
-	          <p className="text-center text-xs uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-8">Trusted by leading organizations</p>
+	          <p className="text-center text-xs uppercase tracking-[0.15em] text-[var(--text-secondary)] mb-8">Our Sponsers:</p>
           <div className="logo-marquee">
             <div className="logo-marquee-content">
-              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                <div key={i} className="flex items-center justify-center mx-8 md:mx-12">
-                  <Image src="https://univadev.com/univadev.svg" alt={logo.alt} width={120} height={40} className="h-8 md:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              {[...sponsorLogos, ...sponsorLogos].map((logo, i) => (
+                <div key={i} className="flex h-20 w-48 items-center justify-center rounded-lg bg-white px-4 py-2 mx-6 md:mx-10">
+                  <Image src={logo.src} alt={`${logo.alt} logo`} width={160} height={80} className={`${logo.className} w-auto max-w-40 md:max-w-48 object-contain transition-opacity`} />
                 </div>
               ))}
             </div>
