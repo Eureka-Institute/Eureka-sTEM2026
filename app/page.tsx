@@ -51,11 +51,11 @@ function AnimatedCounter({ value }: { value: string }) {
 }
 
 const sponsorLogos = [
-  { src: "/logos/sponsors/codecrafters.png", alt: "CodeCrafters", className: "h-10 md:h-12" },
-  { src: "/logos/sponsors/nordvpn.png", alt: "NordVPN", className: "h-20 md:h-24" },
-  { src: "/logos/sponsors/nordpass.png", alt: "NordPass", className: "h-10 md:h-12" },
-  { src: "/logos/sponsors/incogni.png", alt: "Incogni", className: "h-16 md:h-20" },
-  { src: "/logos/sponsors/saily.png", alt: "Saily", className: "h-16 md:h-20" },
+  { src: "/logos/sponsors/codecrafters.png", alt: "CodeCrafters", href: "https://codecrafters.io", className: "h-10 md:h-12" },
+  { src: "/logos/sponsors/nordvpn.png", alt: "NordVPN", href: "https://nordvpn.com", className: "h-20 md:h-24" },
+  { src: "/logos/sponsors/nordpass.png", alt: "NordPass", href: "https://nordpass.com", className: "h-10 md:h-12" },
+  { src: "/logos/sponsors/incogni.png", alt: "Incogni", href: "https://incogni.com", className: "h-16 md:h-20" },
+  { src: "/logos/sponsors/saily.png", alt: "Saily", href: "https://saily.com", className: "h-16 md:h-20" },
 ]
 
 export default function EurekaDevPage() {
@@ -260,9 +260,9 @@ export default function EurekaDevPage() {
           <div className="logo-marquee">
             <div className="logo-marquee-content">
               {[...sponsorLogos, ...sponsorLogos].map((logo, i) => (
-                <div key={i} className="flex h-20 w-48 items-center justify-center rounded-lg bg-white px-4 py-2 mx-6 md:mx-10">
+                <a key={i} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${logo.alt} website`} className="flex h-20 w-48 items-center justify-center rounded-lg bg-white px-4 py-2 mx-6 md:mx-10">
                   <Image src={logo.src} alt={`${logo.alt} logo`} width={160} height={80} className={`${logo.className} w-auto max-w-40 md:max-w-48 object-contain transition-opacity`} />
-                </div>
+                </a>
               ))}
             </div>
           </div>
